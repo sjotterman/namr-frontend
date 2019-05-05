@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Namr</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="content">
+      <h2>Namr</h2>
+      <h3>Startup name generator</h3>
+      <div class="instructions">
+        <p>Click the button to generate a name</p>
+      </div>
+      <div id="results">???</div>
+      <button id="generate">Generate</button>
+    </div>
+  </body>
+  <script>
+    const generateButton = document.querySelector("#generate");
+    const results = document.querySelector("#results");
+    generateButton.addEventListener("click", e => {
+      fetch("https://namr.server.samuelotterman.com/name")
+        .then(response => response.json()).
+        then(data => {
+            results.innerText = data.name;
+        })
+        .catch(error => {
+          console.log({ error });
+        });
+    });
+  </script>
+</html>
