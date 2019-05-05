@@ -1,6 +1,16 @@
+html {
+    background-color: #6666ff;
+    color: #1a2a3a;
+}
+
 #generate {
-    background-color: blue;
-    color: #eeeeee;
+    background-color: #66ff99;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+}
+
+.content {
+    text-align: center;
 }
 
 #results {
