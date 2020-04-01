@@ -20,7 +20,7 @@
     const generateButton = document.querySelector("#generate");
     const results = document.querySelector("#results");
     generateButton.addEventListener("click", e => {
-      fetch("https://namr.server.samuelotterman.com/name")
+      fetch("https://namr-api.samuelotterman.com/api/name")
         .then(response => response.json()).
         then(data => {
             results.innerText = data.name;
